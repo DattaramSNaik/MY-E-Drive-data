@@ -1,0 +1,9 @@
+#level1 {
+  margin-bottom: 30px;
+  border: solid 1px black;
+}
+#level2 {
+  margin-top: 10px;
+  border: solid 1px black;
+  padding: 10px;
+}

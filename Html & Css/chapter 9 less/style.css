@@ -1,0 +1,16 @@
+body {
+  background-color: gray;
+}
+.btn {
+  background-color: gray;
+  color: red;
+}
+#link-list a {
+  color: blue;
+  background-color: red;
+  text-decoration: none;
+}
+#link-list a:hover {
+  background-color: aqua;
+  color: white;
+}

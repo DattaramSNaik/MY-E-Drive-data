@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "compiler": "^0.1.2",
+    "less": "^4.1.2",
+    "watch": "^1.0.2"
+  }
+}

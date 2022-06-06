@@ -1,0 +1,42 @@
+.primary h1 {
+  background-color: tomato;
+  color: blue;
+  padding: auto;
+}
+.secondary h1 {
+  background-color: blueviolet;
+  color: burlywood;
+  padding: auto;
+}
+.primary p em {
+  color: coral;
+  padding: auto;
+}
+.secondary p em {
+  color: cyan;
+  padding: auto;
+}
+.secondary .inner-box {
+  background-color: rgb(0, 107, 139);
+  padding: auto;
+}
+* {
+  margin: 0%;
+  padding: 0%;
+  padding: auto;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.primary {
+  display: inline-block;
+  margin: 10px;
+  /* padding: auto; */
+}
+.secondary h1 {
+  display: inline;
+}
+.secondary .inner-box {
+  display: inline;
+}
+.secondary {
+  margin: 10px;
+}

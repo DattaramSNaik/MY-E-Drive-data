@@ -1,0 +1,162 @@
+here - courses is collection in db test
+use test
+0. mongod -  You start it, it runs, end of story.
+1. use <<db name>>  - it can switch into that db or else create db with same name
+2. show collections - it shows the collection within the db
+3.db.<collection name>.insert({"name":"Peter", "age"):"25"}) - to enter the collection and data in current db
+4. use <dbname>, >> db.dropDatabase() - it drops/delet the db.
+5. db.<collection name>.find() - it will display the data in the collection.
+6. db.<courses>.insertMany(..below..data) - it inserts the data many in json format.
+[{"id":"5a68fdc3615eda645bc6bdec","tags":["express","backend"],"date":"2018-01-24T21:42:27.388Z","name":"Express.js Course new","author":"Mosh","isPublished":true,"price":10,"_v":0}
+{"id":"5a68fdd7bee8ea64649c2777","tags":["node","backend"],"date":"2018-01-24T21:42:47.912Z","name":"Node.js Course","author":"Mosh","isPublished":true,"price":20,"_v":0}
+{"id":"5a68fde3f09ad7646ddec17e","tags":["aspnet","backend"],"date":"2018-01-24T21:42:59.605Z","name":"ASP.NET MVC Course","author":"Mosh","isPublished":true,"price":15,"_v":0}
+{"id":"5a68fdf95db93f6477053ddd","tags":["react","frontend"],"date":"2018-01-24T21:43:21.589Z","name":"React Course","author":"Mosh","isPublished":false,"_v":0}
+{"id":"5a68fe2142ae6a6482c4c9cb","tags":["node","backend"],"date":"2018-01-24T21:44:01.075Z","name":"Node.js Course by Jack","author":"Jack","isPublished":true,"price":12,"_v":0}
+{"id":"5a68ff090c553064a218a547","tags":["node","backend"],"date":"2018-01-24T21:47:53.128Z","name":"Node.js Course by Mary","author":"Mary","isPublished":false,"price":12,"_v":0}
+{"id":"5a6900fff467be65019a9001","tags":["angular","frontend"],"date":"2018-01-24T21:56:15.353Z","name":"Angular Course","author":"Mosh","isPublished":true,"price":15,"_v":0}]
+7. db.<courses>.find({"author":"Mosh"}).pretty()
+8.db.<courses>.find({"price":{$lt:10}}).pretty() - gives the document whose price is less than 10
+9. db.<courses>.find({"price":{$gt:10}}).pretty() - gives the document whose price is greater than 10
+10. db.<courses>.find({"price":{$gte:10}}).pretty() - gives the document whose price is greater than or equal to 10
+11. db.<courses>.find({"price":{$lte:10}}).pretty() - gives the document whose price is less than or equal to  10
+12. db.<courses>.find({"price":{$ne:10}}).pretty() - gives the document whose price is not equal to  10
+13. db.<courses>.find({"price":{"$in":[10,14]}}) - gives the document with price =10,14 ..@kind off findMany();
+14. db.<courses>.find({"price":{"$nin":[10,14]}}) - gives the document with price !=10,14 ..@kind off findMany();
+15. db.<courses>.find({"price":12, "author":"Mary"})-  Gives the document with price12 AND author Mary. @kindoff AND operator 
+16.  db.<courses>.find({"author":{"$in":["Mary", "Mosh"]}, "price":{"$lt":15}})-gives the data with author Mary or Mosh and price less than 15
+17. db.courses.find({$and:[{"author":"Mosh"}, {"price":15}]}).pretty()- AND operation gives strict mosh and 15 op
+18. db.courses.find({$or:[{"author":"Mosh"}, {"price":15}]}).pretty() - OR operation takes the conditions in the array
+19.db.courses.find({$or:[{"author":"Mosh"}, {"price":15}]}) - gives first data ..@dont use pretty()
+20.db.courses.find({"_id":ObjectId("620b62b8ccff67448f836c33")}).pretty()- to find docuument with id
+21.db.courses.find({"author":"Jack",$or:[{"price":12},{"isPublised":true}]}).pretty(). - gives the document with author jack And price 12 OR ispublished true
+22. db.courses.find({},{"name":1}).pretty() - to display only name in the collection.
+Note: only use 1 or 0 for key name, cant use name:1, isPublished:0
+find(), takes two params 1 condition $in,$lt etc,, and second param is projection with 1 inclusion to show key or 0 exclusion to not to show the key,  
+23.db.<courses>.find().limit(2)- displays the first 2 data when found();
+ =().limit(5).skip(2).pretty() - limits to only 5 records and skips first 2 so only 3,4,5 record appears
+25. db.<courses>.find().sort(1) - to sort in ascending order
+26. db.<courses>.find().sort(-1) - to sort in descending order
+27. db.<courses>.find().limit(5).skip(2).sort(1) -let say for 10 documents limits 5 document and skips first too which means now the data will be 3-7 and sort in ascending order
+28. db.courses.find({"price":{$not:{$lt:20}}}).pretty() - not less than
+29. db.inventory.find( { $nor: [ { price: 12 }, { author: "Mosh" } ]  } ) - logical nor
+28. db.courses.find({"price":{$exists:true}}).count() - give the total number of document which has price fileds 
+29. Type - TBC.....
+30.db.people.updateOne({"_id":ObjectId("620dfd2c7ec72d2880f868ac")},{$set:{name:"
+Rashid"}}) - update one data at a time , it takes two para first is condition second is action set 
+31. db.people.updateOne({"_id":ObjectId("620dfd2c7ec72d2880f868ac")},{$set:{name:"
+Rashid"} , {multi:true}}) - update all the matching condition, it takes three para first is condition second is action set and third is multi to access all data
+32.db.people.update({"name":"Pradnya"},{$inc:{age:1}}) - increment by 1 if given negative data it will decrement by 1 or whatever data given
+33. Time Stamp - TBC....
+34.$min - TBC @already cleared
+35. $mul - TBC
+36.  db.people.update({"name":"Pradnya"},{$mul:{age:1000}}) - multiplies with the given field vlaue upon meeting the condition .
+37. db.people.update({},{$rename:{"__v":"version"}}, {multi:true}) - Only to rename the field name . with multi = true
+38. db.people.update({name:"Sam"}, {$setOnInsert:{"city":"Delhi"}},{upsert:true}) - setOnInsert to insert the new document only if the first condition {name:sam} doenst exist 
+39. $unset - TBC...
+40. 
+41 . To import data into mongodb through json file  - >> mongoimport -d test --jsonArray -c students --file students.json --maintainInsertionOrder
+restaurants.json @here maintainInsertionOrder is necessary to import the file in the porper format
+All mongo improt export commands should be run over cmd only strictly '
+42. db.foo.update(
+   { _id: 1 },
+   { $addToSet: { colors: "c" } }
+) - to insert the array elemment addToSet in an existing array document
+43. db.fooo.update({_id:1},{$pop:{colors:1}})
+Pop to remove the elements from array , note: 1 refers to popping last element and -1 as the first ..looks exactly opposite to js array
+43.db.fooo.update({},{$pull:h{$in:["apple"]}}},{multi:true}) removes the element apple only from the collection in fruits document array
+44. db.fooo.update({_id:5},{$pull:{vote:{$gt:6}}}) to remove the elemetns from array where vote >6 in vote: [1,2,3,4,5,6,7,8,9];
+45. > db.restaurants.find({"address.zipcode":"11225",name:"Wendy'S"}).pretty() to find specific data
+46. db.restaurants.update({},{$pull:{grades:{score:8}}}) to remove/pull the exact data
+47. $each - TBC5
+Aggreation:
+below $group is a stage , and $sum will be operator
+48.> db.students.aggregate([{$group:{_id:'$sex',result:{$sum:1}}}]) -  to group by sex and id will be a unique identifier always given ,,here result will be a user given variable provided to store the Op and $sum:1 will be the sum by 1 increment for every sex found
+49. b.students.aggregate([{$group:{_id:'$class',result:{$max:'$age'}}}])
+50. group -
+db.zipcodes.aggregate( [
+   { $group: { _id: { state: "$state", city: "$city" }, pop: { $sum: "$pop" } } },
+   { $group: { _id: "$_id.state", avgCityPop: { $avg: "$pop" } } }
+] )
+
+Import a File:-
+1)json file without array only object
+mongoimport -d vast -c exercies --file "C:\Users\DattaramN\Downloads\Mudik trainers\MONGODB\exercise-data.json"
+2)csv file import
+mongoimport -d vast -c merge --type csv --file "C:\Users\DattaramN\Downloads\Mudik trainers\MONGODB\data.csv" --headerline
+3)upsert data compare or add new
+>mongoimport -d vast -c exercies --mode upsert --file "C:\Users\DattaramN\Downloads\Mudik trainers\MONGODB\upsert.json"
+4)for merge data 
+--mode merge 
+with Array use --jsonArray
+with csv file after collection --type csv and end of file use --headerline
+
+IMPORT CSV WITHOUT HEADERLINE WITHOUT HEADLINE IN CSV
+mongoimport -d test -c contacts --columnsHaveTypes --type csv --fields="name.string(),birthdate.date(2006-01-02),contacted.boolean(),followerCount.int32(),thumbnail.binary(base64)" --file=D:\kaumudi\MongoDB_training_kaumudi\contacts.csv
+
+
+#EXPORTING :-
+export json data in json format
+mongoexport -d vast -c exercies --jsonArray --out C:\Users\DattaramN\Desktop\W\expData.json
+
+export data in csv format
+mongoexport -d vast -c exercies --type csv --fields=name,size,price,quantity,date --out C:\Users\DattaramN\Desktop\W\orders.csv
+
+dump same as exportdata in mongodb
+C:\Users\DattaramN\Desktop\W>mongodump -d vast -c exercies
+
+restore same as importdata in mongodb
+mongorestore -d vast  C:\Users\DattaramN\Desktop\W\dump\vast
+
+#bson to json conversion 
+bsondump --outFile data.json C:\Users\DattaramN\Desktop\W\dump\vast\employee.bson
+#regex expression
+db.products.find( { sku: { $regex: /789$/ } } )
+db.products.find( { sku: { $regex: /^ABC/i } } )
+db.products.find( { description: { $regex: /^S/, $options: 'm' } } )
+db.products.find( { description: { $regex: /S/ } } )
+{description:/^M/i}
+db.products.find( { description: { $regex: /m.*line/, $options: 'si' } } )
+$option m for multiple lines
+$option i used for casesensitivity
+. any charecter
+* all document(0 or many times then next)
+s new line charecter included
+
+
+
+9th march 2022
+
+Update operation
+example $inc,$set,$unset
+enable us to modify data in the Database.
+
+Query operator
+provide additional way to locate data within the Database
+Procedes MQL operators
+Provides aggrigation pipeline
+Allow access to field  vlaue
+
+comparison operator
+$eq = equal to
+$ne =not equal
+$gt = greater than
+$lt = less than 
+$gte = greater than or equal to 
+$lte = less than or equal to 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

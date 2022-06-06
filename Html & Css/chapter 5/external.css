@@ -1,0 +1,14 @@
+body {
+  background-color: darkgray;
+}
+h2 {
+  color: darkorange;
+  font-size: 100px;
+}
+a {
+  color: aquamarine;
+}
+
+p {
+  border: 1px solid blue;
+}

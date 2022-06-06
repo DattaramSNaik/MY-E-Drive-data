@@ -1,0 +1,43 @@
+
+######-: React Installation :- ########
+
+a. npm install -g create-react-app
+b. create-react-app-version 
+->remove powershell file from appData
+c. create-react-app <Project name>
+
+######-: Taiilwind Installation :- ######
+
+npm install tailwindcss
+npx tailwindcss init
+
+tailwind.config.js
+
+module.exports = {
+  content: ["./src/**/*.{html,js,jsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+index.css
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#####-: React Form :- ###### 
+
+React-hook-Form:-
+
+npm install react-hook-form @hookform/resolvers yup
+
+React-Redux
+
+npm install @reduxjs/toolkit react-redux
+https://redux-toolkit.js.org/tutorials/quick-start
+
+
+Admin Panel :-
+git clone -b react-admin https://github.com/safak/youtube.git .

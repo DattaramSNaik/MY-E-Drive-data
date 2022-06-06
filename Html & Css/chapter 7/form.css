@@ -1,0 +1,46 @@
+body {
+  margin: 0%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+h2 {
+  text-align: center;
+}
+div {
+  padding: 50px;
+  background-color: tomato;
+}
+
+fieldset {
+  background-color: aqua;
+}
+legend {
+  background-color: brown;
+  color: white;
+}
+.container {
+  margin: 0 30%;
+  width: 500px;
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="text"],
+form textarea {
+  padding: 10px;
+  background-color: tomato;
+  color: white;
+}
+button {
+  height: 48px;
+  background-color: white;
+  padding: 5px;
+  font-weight: bold;
+  border: solid 1px blueviolet;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 25px;
+  color: red;
+}
+input {
+  display: block;
+}

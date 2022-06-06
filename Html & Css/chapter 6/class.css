@@ -1,0 +1,12 @@
+body {
+  background-color: tomato;
+  text-align: center;
+}
+.primary {
+  background-color: rgb(248, 232, 10);
+  margin: 20px;
+}
+.secondary {
+  background-color: rgb(34, 10, 248);
+  padding: 50px;
+}

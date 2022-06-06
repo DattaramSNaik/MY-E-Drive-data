@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: coral;
+}
+
+#container {
+  width: 500px;
+  height: 300px;
+  margin: 20px auto;
+  background-color: white;
+  text-align: center;
+  color: chocolate;
+}
+
+p {
+  margin-bottom: 20px;
+}
+h1 {
+  margin-bottom: 20px;
+}
+a:link {
+  color: red;
+  text-decoration: none;
+}
+a:visited {
+  color: yellow;
+}
+a:hover {
+  color: tomato;
+}
+a:active {
+  color: yellowgreen;
+}
+#link1:hover {
+  color: turquoise;
+  padding: 10px;
+  background-color: tomato;
+}

@@ -1,0 +1,122 @@
+##############################################################
+Closure :- Inner Function Can access Outer Function is Called Closure.
+           After Function call value will be return next time also. 
+
+Example :-
+function Closure(a) {
+  console.log("live User:- " + a);
+  let c = 4;
+  return function (b) {
+    return a + b + c;
+  };
+}
+let store = Closure(5);
+console.log(store(5));
+######################################################################
+First class Function :- function used same as an variable.
+    ex:-1) assign function as variable .
+        let assignVariable=()=>{}
+        2) passing function as an argument.
+        3) passing function return to the another function.
+            function add(a, b) {
+            return a + b;
+            }
+            function total(a, b, c) {
+            return c(a, b);
+            }
+            let ss = total(9, 2, add);
+            console.log(ss);
+        
+        
+Anonymous Function =  function express has no name. 
+Factory function :- function can return an object.
+###################################################################
+Prototype :- JavaScript object can inherit properties and behavior of another object is 
+            called prototype.
+
+let Mobile = function () {
+  this.a = 10;
+};
+Mobile.prototype.z = 20; //Prototype of Mobile
+Mobile.prototype.ram = function () {
+  return "6GB";
+};
+let Samsung = function () {
+  Mobile.call(this); //access a inside Samsung
+  this.b = 30;
+};
+
+Samsung.prototype = Object.create(Mobile.prototype);
+Samsung.prototype = new Mobile();
+Samsung.prototype.constructer = Samsung;
+Samsung.prototype.ram = function () {
+  return "4GB";
+};
+let s = new Samsung();
+console.log(s.a);
+console.log(s.z);
+console.log(s.b);
+console.log(s.ram());
+
+#############################################3
+Composition or mixin :- used to save memory.
+
+//Mixin Example
+let eating = {
+  eat: function () {
+    return "I can eat";
+  },
+};
+let walking = {
+  walk: function () {
+    return "I can walk";
+  },
+};
+let Talking = {
+  Talk: function () {
+    return "I can Talk";
+  },
+};
+
+let Human = function () {};
+let Animal = function () {};
+let Robot = function () {};
+//Mixins
+Object.assign(Human.prototype, walking, Talking, eating);
+Object.assign(Animal.prototype, walking, eating);
+Object.assign(Robot.prototype, walking, Talking);
+//composition
+let Rahul = new Human();
+console.log(Rahul.walk(), Rahul.Talk(), Rahul.eat());
+let ORRA = new Animal();
+console.log(ORRA.walk(), ORRA.eat());
+let BADY = new Robot();
+console.log(BADY.walk(), BADY.Talk());
+let AKSHAY = Object.assign({}, walking, Talking, eating);
+console.log(AKSHAY.Talk(), AKSHAY.eat(), AKSHAY.walk());
+
+##############################################################
+:- When we need that time only called
+CallBack : - 
+function dispOp(total){
+  console.log(total)
+}
+function sumoftwoNumber(a,b,CallBack){
+  let sum=a+b
+  return CallBack(sum)
+}
+sumoftwoNumber(5,5,dispOp)
+Promies
+Async await
+
+
+difference between aggregate and find
+both are produce same result.
+aggregate() can do what find() can and more.
+aggregate() allows us to compute and reshape data in the cursor.
+
+upsert is hybrid of insert and update,it use when we need.
+
+A sparse array is one in which the elements are not sequential, and they don't always start at 0
+
+Indexes uses for only faster query

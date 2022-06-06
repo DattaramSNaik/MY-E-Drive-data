@@ -1,0 +1,60 @@
+.menu_simple {
+  width: 100%;
+  background-color: #005555;
+}
+
+.menu_simple ul {
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+
+.menu_simple ul li {
+  display: inline;
+}
+
+.menu_simple ul li a {
+  float: left;
+  text-decoration: none;
+  color: white;
+  padding: 10.5px 11px;
+  background-color: #005555;
+}
+
+.menu_simple ul li a:visited {
+  color: white;
+}
+
+.menu_simple ul li a:hover {
+  color: white;
+  background-color: #5fd367;
+}
+
+.menu_simple ul li .current {
+  color: white;
+  background-color: #5fd367;
+}
+
+body {
+  background-color: red;
+}
+
+body h1 {
+  color: white;
+}
+
+body p {
+  color: white;
+  background-color: darkred;
+}
+
+body p a {
+  color: yellow;
+  text-decoration: none;
+}
+
+.btn {
+  background-color: deeppink;
+  color: white;
+}
+/*# sourceMappingURL=assi.css.map */

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript second page</title>
+  </head>
+  <body>
+    <h2>JavaScript Functions 3</h2>
+
+    <p>
+      This example calls a function which performs a calculation and returns the
+      result:
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+      var x = myFunction(30000, 3300, 5);
+      document.getElementById("demo").innerHTML = x;
+
+      function myFunction(points, bonus, level) {
+        return level * points + bonus;
+      }
+      let color = "orange";
+      let yourLevel = 5;
+      let name = "maratha";
+      let color1 = "pink";
+      if (color == "orange") {
+        console.log("Color is Orange");
+      } else {
+        console.log("color is pink");
+      }
+      if (yourLevel > 5) {
+        console.log("Now your level is 7");
+      }
+      if (yourLevel == 5) {
+        console.log("Now your level is 5");
+      } else {
+        console.log("Now your level is 3");
+      }
+      console.log(1000 + "108");
+      console.log(name + " your won...!!!");
+
+      if (color1 != "orange") {
+        console.log("color is pink");
+      }
+    </script>
+  </body>
+</html>

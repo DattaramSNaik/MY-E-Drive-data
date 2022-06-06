@@ -1,0 +1,17 @@
+.primary h1 {
+  background-color: tomato;
+  color: blue;
+}
+.secondary h1 {
+  background-color: blueviolet;
+  color: burlywood;
+}
+.primary p em {
+  color: coral;
+}
+.secondary p em {
+  color: cyan;
+}
+body {
+  text-align: center;
+}

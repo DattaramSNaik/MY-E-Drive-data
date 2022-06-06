@@ -1,0 +1,35 @@
+{"price":{"$gte":150}}
+{"price":{"$gt":150}}
+{"price":{"$lte":200}}
+{"price":{"$lt":200}}
+{"price":{"$eq":200}}
+{"price":{"$ne":200}}
+{ "tags": { "$in": ["frontend"] } }
+{ "tags": { "$nin": ["frontend"] } }
+{ $and: [ { price: { $ne: 200 } }, { price: { $exists: true } } ] }
+{ $or: [ { price: { $lt: 200 } }, { price: { $exists: false } } ] }
+
+. Match next line of document
+^ starts with
+* 0 or more types
+$ end with 
+{"name":/^vue/i}
+{"name":/course$/i}
+{"name":/.*js.*/i}
+
+errors: {
+    category: ValidatorError: {value} is not supported
+        at validate (E:\mudik\node js\mongoose_demo\node_modules\mongoose\lib\schematype.js:1321:13)
+        at SchemaString.SchemaType.doValidate (E:\mudik\node js\mongoose_demo\node_modules\mongoose\lib\schematype.js:1305:7)
+        at E:\mudik\node js\mongoose_demo\node_modules\mongoose\lib\document.js:2719:18
+        at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+      properties: [Object],
+      kind: 'enum',
+      path: 'category',
+      value: '',
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'courses validation failed'
+}

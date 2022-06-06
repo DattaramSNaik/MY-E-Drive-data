@@ -1,0 +1,16 @@
+Madagascar 3
+2016|4.7(Imdb)|2hr:22mins|English
+stremlab is a long established fact that render will be districted by the
+readable content of ta page when streamlab atits layout streamlab.
+
+starring karen gilchrist,james earl,jones
+genres Action
+Tag Action,Advanture,Horror
+
+PLAY NOW
+WATCH TRAILER
+
+make get router for search 
+define regex
+write code for search data in mongodb
+test with postman

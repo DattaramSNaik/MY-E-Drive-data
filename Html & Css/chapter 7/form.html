@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form styling</title>
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+    <h2>-: Lets, Learn About html form styling :-</h2>
+
+    <div class="container">
+      <fieldset>
+        <legend>Candidate Details</legend>
+        <form>
+          <label for="name">Enter Candidate Name:</label><br />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value=""
+            placeholder="candidate name"
+          /><br />
+          <label for="lname">Enter Candidate Email:</label><br />
+          <input
+            type="email"
+            id="email"
+            name="lname"
+            value=""
+            placeholder="Candidate Email id"
+          /><br />
+          <label for="nikename">Enter Candidate Nikename:</label><br />
+          <input
+            type="text"
+            id="nikename"
+            name="nikename"
+            placeholder="nikename"
+            value=""
+          /><br />
+          <label for="add">Enter Candidate Address:</label><br />
+          <textarea type="text" rows="3" id="add" name="add"></textarea
+          ><br /><br />
+          <button type="submit">Submit</button>
+        </form>
+      </fieldset>
+    </div>
+  </body>
+</html>
